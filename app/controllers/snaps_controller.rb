@@ -11,5 +11,18 @@ class SnapsController < ApplicationController
     render json: @snap, status: :ok
   end
 
+  def show
+    @snap = Snap.find(params[:id])
+    render json: @snap, status: :ok
+  end
+
+  def update
+    @snap = Snap.find(params[:id])
+
+    @snap.update(viewed: params[:viewed])
+
+    render json: @snap, status: :ok
+  end
+
 
 end
