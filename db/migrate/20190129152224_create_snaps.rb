@@ -7,6 +7,7 @@ class CreateSnaps < ActiveRecord::Migration[5.2]
       t.boolean :viewed
       t.integer :timer
       t.string :dataUri
+      t.string :stickerUrl
 
       t.timestamps
     end
