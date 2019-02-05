@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   resources :snaps
   resources :relationships
 
+
+post '/email', to: 'users#email'
 end

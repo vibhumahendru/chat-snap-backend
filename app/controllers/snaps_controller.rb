@@ -24,5 +24,9 @@ class SnapsController < ApplicationController
     render json: @snap, status: :ok
   end
 
+  # def email
+  #
+  # end
+
 
 end
