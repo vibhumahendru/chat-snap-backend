@@ -7,7 +7,7 @@ class SnapsController < ApplicationController
   end
 
   def create
-    @snap = Snap.create(sender_id: params[:sender_id], reciever_id: params[:reciever_id], dataUri: params[:dataUri], viewed: false, timer: params[:timer], stickerUrl: params[:stickerUrl])
+    @snap = Snap.create(sender_id: params[:sender_id], reciever_id: params[:reciever_id], dataUri: params[:dataUri], viewed: false, timer: params[:timer], stickerUrl: params[:stickerUrl], message: params[:message])
     render json: @snap, status: :ok
   end
 

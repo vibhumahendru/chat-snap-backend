@@ -43,7 +43,7 @@ class UsersController < ApplicationController
               'Name'=> "#{@reciever.name}"
           }
       ],
-      'Subject'=> 'FR',
+      'Subject'=> 'Chat Snap Friend Request',
       'TextPart'=> "You got a friend request from: #{@sender.name}
       "
 
