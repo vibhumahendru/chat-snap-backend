@@ -29,4 +29,10 @@ class RelationshipsController < ApplicationController
     render json: @relationship, status: :ok
   end
 
+  def destroy
+    
+    @relationship = Relationship.find(params[:id])
+    @relationship.destroy
+  end
+
 end
