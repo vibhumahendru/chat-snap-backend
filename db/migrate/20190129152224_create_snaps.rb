@@ -9,6 +9,7 @@ class CreateSnaps < ActiveRecord::Migration[5.2]
       t.string :dataUri
       t.string :stickerUrl
       t.string :message
+      t.string :textColor
 
       t.timestamps
     end

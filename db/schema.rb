@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(version: 2019_01_29_163313) do
     t.string "dataUri"
     t.string "stickerUrl"
     t.string "message"
+    t.string "textColor"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["reciever_id"], name: "index_snaps_on_reciever_id"
