@@ -14,7 +14,11 @@ class RelationshipsController < ApplicationController
 
   def create
     @relationship = Relationship.create(friender_id: params[:friender_id], friendee_id: params[:friendee_id], accepted: false)
-    render json: @relationship, status: :ok
+    if @relationship.valid?
+        render json: @relationship, status: :ok
+      else
+      render json: { error: 'failed to create user' }, status: :not_acceptable
+    end
   end
 
   def update
