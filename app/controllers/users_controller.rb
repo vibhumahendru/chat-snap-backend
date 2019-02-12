@@ -14,7 +14,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.create(name: params[:name])
+    @user = User.create(name: params[:name], avatarUrl: params[:avatarUrl])
     render json: @user, status: :ok
   end
 
